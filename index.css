@@ -1,0 +1,77 @@
+nav li {
+list-style: none;
+display: inline-block;
+}
+
+nav {
+  float: left;
+
+}
+
+body {
+  margin: 0px;
+}
+
+header {
+  border-bottom: 2px solid #DCDCDC;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+p.hi {
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 40px;
+  position: relative;
+  bottom: 20px;
+}
+
+p span {
+  font-size: 23px;
+}
+img.hello {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  bottom: 30px;
+}
+p.nothing {
+  position:relative;
+  bottom: 20px;
+  color: white;
+  border-bottom: 2px solid #DCDCDC;
+}
+nav ul {
+  position: relative;
+  right: 30px;
+}
+nav ul img {
+  margin-left: 10px;
+}
+.menus {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-evenly;
+  padding: 50px;
+}
+.menus figure a img {
+  margin-bottom: 17px;
+}
+.menus figure a img:hover {
+  opacity: 0.5;
+  transition: 0.4s;
+}
+
+.menus figcaption {
+text-align: center;
+font-family: 'Source Sans Pro', sans-serif;
+}
+
+.menus figcaption span {
+  font-size: 35px;
+}
