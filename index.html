@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Portfolio | [Your Name]</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Phosphor Icons via CDN (replaces Lucide) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Tailwind Configuration to match your chosen colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#272B1C',
+                        bgbase: '#f6f2ee',
+                        accent: '#cc5801',
+                        accentHover: '#b14b01'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="flex h-screen bg-bgbase font-sans text-slate-800 overflow-hidden">
+
+    <!-- Mobile Header -->
+    <div class="md:hidden fixed top-0 w-full z-50 flex items-center justify-between p-4 text-white shadow-md bg-primary">
+        <span class="font-bold text-lg">[Your Name]</span>
+        <button onclick="toggleMenu()" class="p-1 focus:outline-none">
+            <i class="ph ph-list text-2xl" id="menu-icon"></i>
+        </button>
+    </div>
+
+    <!-- Sidebar Overlay for Mobile -->
+    <div id="mobile-overlay" class="md:hidden fixed inset-0 bg-black/50 z-40 hidden" onclick="toggleMenu()"></div>
+
+    <!-- Sidebar (Desktop fixed, Mobile off-canvas) -->
+    <aside id="sidebar" class="fixed md:static inset-y-0 left-0 z-50 w-72 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out flex flex-col h-full bg-primary text-white">
+        <div class="p-8 flex flex-col items-center flex-shrink-0">
+            <div class="w-32 h-32 rounded-full border-4 border-white/20 overflow-hidden mb-4 bg-white/10 flex items-center justify-center">
+                <!-- Replace with your image: <img src="your-photo.jpg" class="w-full h-full object-cover" /> -->
+                <i class="ph ph-user text-6xl text-white/50"></i>
+            </div>
+            <h1 class="text-2xl font-bold mb-2">[Your Name]</h1>
+            <p class="text-sm text-center text-white/80 leading-relaxed mb-6">
+                Hi, my name is [Your Name] and I'm an Aerospace Engineering student at UCSD. Welcome to my academic portfolio!
+            </p>
+            
+            <div class="flex space-x-3 mb-8">
+                <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                    <i class="ph ph-github-logo"></i>
+                </a>
+                <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                    <i class="ph ph-linkedin-logo"></i>
+                </a>
+                <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                    <i class="ph ph-envelope"></i>
+                </a>
+            </div>
+        </div>
+
+        <nav class="flex-1 overflow-y-auto py-4">
+            <ul class="space-y-1">
+                <li>
+                    <a href="#about" onclick="toggleMenu()" class="flex items-center px-8 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors">
+                        <i class="ph ph-user text-lg mr-4"></i>
+                        <span class="font-medium text-sm">About Me</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects" onclick="toggleMenu()" class="flex items-center px-8 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors">
+                        <i class="ph ph-folder-notch text-lg mr-4"></i>
+                        <span class="font-medium text-sm">Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#experience" onclick="toggleMenu()" class="flex items-center px-8 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors">
+                        <i class="ph ph-briefcase text-lg mr-4"></i>
+                        <span class="font-medium text-sm">Experience</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#resume" onclick="toggleMenu()" class="flex items-center px-8 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors">
+                        <i class="ph ph-file-text text-lg mr-4"></i>
+                        <span class="font-medium text-sm">Resume</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="p-8 flex-shrink-0">
+            <a href="mailto:your.email@ucsd.edu" class="w-full py-3 px-4 rounded bg-accent hover:bg-accentHover text-white flex items-center justify-center font-bold transition-colors shadow-lg">
+                <i class="ph ph-paper-plane-tilt text-lg mr-2"></i>
+                Contact Me
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 h-full overflow-y-auto bg-bgbase pt-16 md:pt-0 scroll-smooth">
+        <div class="max-w-5xl mx-auto p-8 md:p-12 lg:p-16">
+            
+            <!-- Intro Section -->
+            <section id="about" class="mb-20 pt-4">
+                <div class="flex flex-col-reverse lg:flex-row gap-12 items-start">
+                    <div class="flex-1">
+                        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+                            [Your Name]
+                        </h1>
+                        <h2 class="text-xl text-slate-500 mb-6 font-medium">
+                            Aerospace Engineering Undergraduate
+                        </h2>
+                        <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                            I am a student at UC San Diego bridging operational discipline with <span class="font-semibold text-primary">computational aerodynamics</span>. Following my military service, I am bringing rigorous analytical focus to academic research, specializing in fluid dynamics, custom numerical solvers, and the intersection of physics and machine learning.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#projects" class="px-6 py-3 text-white font-medium rounded shadow-md transition-colors flex items-center hover:opacity-90 bg-primary">
+                                <i class="ph ph-folder-notch text-lg mr-2"></i> View Portfolio
+                            </a>
+                            <a href="#resume" class="px-6 py-3 bg-slate-800 text-white font-medium rounded shadow-md hover:bg-slate-700 transition-colors flex items-center">
+                                <i class="ph ph-file-text text-lg mr-2"></i> View Resume
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Right side placeholder image area -->
+                    <div class="w-full lg:w-1/3 aspect-[4/5] bg-slate-200 rounded-lg overflow-hidden shadow-inner flex items-center justify-center">
+                        <!-- Add your image here: <img src="your-photo.jpg" class="w-full h-full object-cover"> -->
+                        <span class="text-slate-400 font-medium">Profile Image Placeholder</span>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="border-slate-200 mb-16" />
+
+            <!-- Technical Core Section -->
+            <section id="projects" class="mb-20 pt-4">
+                <div class="mb-10">
+                    <h2 class="text-3xl font-bold text-slate-900 flex items-center">
+                        <div class="w-1.5 h-8 mr-4 rounded-sm bg-primary"></div>
+                        Technical Focus
+                    </h2>
+                    <p class="text-slate-600 mt-4 leading-relaxed max-w-3xl">
+                        A selection of my academic research and personal engineering projects focusing on numerical methods, physical modeling, and fluid dynamics. Check out my GitHub to view the source code.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                    
+                    <!-- Skill 1 -->
+                    <div class="mb-8">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 rounded-lg flex items-center justify-center mr-4 bg-primary text-white">
+                                <i class="ph ph-wind text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800">Vortex Panel Method Solver</h3>
+                        </div>
+                        <p class="text-slate-600 mb-3 leading-relaxed text-sm">
+                            Developed a custom 2D aerodynamic solver from scratch to analyze arbitrary airfoil geometries by enforcing the Kutta condition to predict lift coefficients and pressure distributions.
+                        </p>
+                        <p class="text-xs font-semibold text-slate-500">
+                            <span class="text-primary">Tech:</span> Python, NumPy, Matplotlib
+                        </p>
+                    </div>
+
+                    <!-- Skill 2 -->
+                    <div class="mb-8">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 rounded-lg flex items-center justify-center mr-4 bg-primary text-white">
+                                <i class="ph ph-cpu text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800">PINNs for Fluid Dynamics</h3>
+                        </div>
+                        <p class="text-slate-600 mb-3 leading-relaxed text-sm">
+                            Explored the integration of physical laws into neural network architectures. Built prototype models to solve partial differential equations (PDEs) utilizing boundary condition data.
+                        </p>
+                        <p class="text-xs font-semibold text-slate-500">
+                            <span class="text-primary">Tech:</span> PyTorch, Machine Learning, CFD
+                        </p>
+                    </div>
+
+                    <!-- Skill 3 -->
+                    <div class="mb-8">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 rounded-lg flex items-center justify-center mr-4 bg-primary text-white">
+                                <i class="ph ph-code text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800">CST Airfoil Parameterization</h3>
+                        </div>
+                        <p class="text-slate-600 mb-3 leading-relaxed text-sm">
+                            Implemented Class-Shape Transformation (CST) mathematical models to parametrically design and optimize aerodynamic surfaces, reducing the dimensionality required for algorithms.
+                        </p>
+                        <p class="text-xs font-semibold text-slate-500">
+                            <span class="text-primary">Tech:</span> MATLAB, Python, Geometry
+                        </p>
+                    </div>
+
+                    <!-- Skill 4 -->
+                    <div class="mb-8">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 rounded-lg flex items-center justify-center mr-4 bg-primary text-white">
+                                <i class="ph ph-folder-notch text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800">Numerical Optimization</h3>
+                        </div>
+                        <p class="text-slate-600 mb-3 leading-relaxed text-sm">
+                            Applying advanced numerical methods and linear algebra to optimize structural and aerodynamic parameters for high-performance applications.
+                        </p>
+                        <p class="text-xs font-semibold text-slate-500">
+                            <span class="text-primary">Tech:</span> C++, SciPy, Algorithms
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <hr class="border-slate-200 mb-16" />
+
+            <!-- Experience Section -->
+            <section id="experience" class="mb-20 pt-4">
+                <div class="mb-10">
+                    <h2 class="text-3xl font-bold text-slate-900 flex items-center">
+                        <div class="w-1.5 h-8 mr-4 rounded-sm bg-primary"></div>
+                        Experience & Leadership
+                    </h2>
+                </div>
+                
+                <div class="max-w-3xl space-y-4">
+                    
+                    <!-- Exp 1 -->
+                    <div class="relative pl-6 pb-8 border-l-2 border-slate-200 last:pb-0">
+                        <div class="absolute left-[-9px] top-1 w-4 h-4 bg-bgbase border-2 border-primary rounded-full"></div>
+                        <h3 class="text-lg font-bold text-slate-800">Undergraduate Researcher</h3>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
+                            <span class="font-semibold text-primary">UC San Diego</span>
+                            <span class="text-sm text-slate-500">Present</span>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Pursuing a rigorous curriculum in Aerospace Engineering. Focusing on advanced fluid mechanics, structural analysis, and computational methods to prepare for PhD-level research.
+                        </p>
+                    </div>
+
+                    <!-- Exp 2 -->
+                    <div class="relative pl-6 pb-8 border-l-2 border-slate-200 last:pb-0">
+                        <div class="absolute left-[-9px] top-1 w-4 h-4 bg-bgbase border-2 border-primary rounded-full"></div>
+                        <h3 class="text-lg font-bold text-slate-800">Presenter / Participant</h3>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
+                            <span class="font-semibold text-primary">KATALYST 2024 Conference</span>
+                            <span class="text-sm text-slate-500">2024</span>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Presented insights connecting aerospace industry trends to STEM leadership. Networked with industry leaders and advocated for interdisciplinary approaches in engineering problem-solving.
+                        </p>
+                    </div>
+
+                    <!-- Exp 3 -->
+                    <div class="relative pl-6 pb-8 border-l-2 border-slate-200 last:pb-0">
+                        <div class="absolute left-[-9px] top-1 w-4 h-4 bg-bgbase border-2 border-primary rounded-full"></div>
+                        <h3 class="text-lg font-bold text-slate-800">Military Service Member</h3>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
+                            <span class="font-semibold text-primary">[Branch of Service]</span>
+                            <span class="text-sm text-slate-500">[Year] - [Year]</span>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Demonstrated high-stakes operational discipline and team management. Honed the ability to execute complex procedures under pressure, skills directly translatable to rigorous academic research environments.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Resume Download Section -->
+            <section id="resume" class="mb-12 pt-4">
+                <div class="p-8 bg-white border border-slate-200 rounded-xl flex flex-col md:flex-row items-center justify-between">
+                    <div class="mb-6 md:mb-0 md:mr-8 text-center md:text-left">
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Ready to learn more?</h3>
+                        <p class="text-slate-600 text-sm">Download my full academic CV to review my complete coursework, skills, and background.</p>
+                    </div>
+                    <!-- Put the link to your actual PDF in the href below -->
+                    <a href="#" download class="px-6 py-3 text-white font-medium rounded shadow-md hover:opacity-90 transition-opacity flex items-center flex-shrink-0 bg-primary">
+                        <i class="ph ph-download-simple text-lg mr-2"></i> Download Resume
+                    </a>
+                </div>
+            </section>
+
+        </div>
+        
+        <!-- Footer -->
+        <footer class="py-8 border-t border-slate-200 text-center">
+            <p class="text-slate-500 text-sm">
+                &copy; <span id="year"></span> [Your Name]. All rights reserved.
+            </p>
+        </footer>
+    </main>
+
+    <!-- JavaScript for Mobile Menu & Dynamic Year -->
+    <script>
+        // Set copyright year automatically
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Handle Mobile Menu Toggling
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('mobile-overlay');
+            const menuIcon = document.getElementById('menu-icon');
+            
+            // Toggle sidebar classes
+            sidebar.classList.toggle('-translate-x-full');
+            
+            // Toggle overlay
+            overlay.classList.toggle('hidden');
+            
+            // Toggle icon (List/X)
+            if (sidebar.classList.contains('-translate-x-full')) {
+                menuIcon.classList.remove('ph-x');
+                menuIcon.classList.add('ph-list');
+            } else {
+                menuIcon.classList.remove('ph-list');
+                menuIcon.classList.add('ph-x');
+            }
+        }
+        
+        // Ensure menu closes if window is resized to desktop width
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) { // 768px is Tailwind's 'md' breakpoint
+                document.getElementById('sidebar').classList.add('-translate-x-full');
+                document.getElementById('mobile-overlay').classList.add('hidden');
+                document.getElementById('menu-icon').classList.remove('ph-x');
+                document.getElementById('menu-icon').classList.add('ph-list');
+            }
+        });
+    </script>
+</body>
+</html>
