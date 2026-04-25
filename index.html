@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Portfolio | [Your Name]</title>
+    <title>Kwangbin Bae</title>
     
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -31,7 +31,7 @@
 
     <!-- Mobile Header -->
     <div class="md:hidden fixed top-0 w-full z-50 flex items-center justify-between p-4 text-white shadow-md bg-primary">
-        <span class="font-bold text-lg">[Your Name]</span>
+        <span class="font-bold text-lg">Kwangbin Bae</span>
         <button onclick="toggleMenu()" class="p-1 focus:outline-none">
             <i class="ph ph-list text-2xl" id="menu-icon"></i>
         </button>
@@ -47,10 +47,17 @@
                 <!-- Replace with your image: <img src="your-photo.jpg" class="w-full h-full object-cover" /> -->
                 <i class="ph ph-user text-6xl text-white/50"></i>
             </div>
-            <h1 class="text-2xl font-bold mb-2">[Your Name]</h1>
+            <h1 class="text-2xl font-bold mb-2">Kwangbin Bae</h1>
+            <a href="https://mae.ucsd.edu/" target="_blank">
+                <img src="mae.png" alt="MAE" width="180" style="padding: 15px;">
+            </a>
             <p class="text-sm text-center text-white/80 leading-relaxed mb-6">
-                Hi, my name is [Your Name] and I'm an Aerospace Engineering student at UCSD. Welcome to my academic portfolio!
+                +82 10-5933-4595<br>
+                bkbin1022@gmail.com<br>
+                9500 Gilman Dr, La Jolla, CA 92093
             </p>
+            
+
             
             <div class="flex space-x-3 mb-8">
                 <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
@@ -111,13 +118,15 @@
                 <div class="flex flex-col-reverse lg:flex-row gap-12 items-start">
                     <div class="flex-1">
                         <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
-                            [Your Name]
+                            Kwangbin Bae
                         </h1>
                         <h2 class="text-xl text-slate-500 mb-6 font-medium">
-                            Aerospace Engineering Undergraduate
+                            Second Year Aerospace Engineering
                         </h2>
                         <p class="text-lg text-slate-600 mb-8 leading-relaxed">
-                            I am a student at UC San Diego bridging operational discipline with <span class="font-semibold text-primary">computational aerodynamics</span>. Following my military service, I am bringing rigorous analytical focus to academic research, specializing in fluid dynamics, custom numerical solvers, and the intersection of physics and machine learning.
+                            I am a student at UC San Diego broadly interested in data-driven engineering and design optimization. 
+                            I have worked on optimization using Origami methods and currently working on projects related to neural networks and topology optimization.
+                            
                         </p>
                         
                         <div class="flex flex-wrap gap-4">
@@ -145,10 +154,10 @@
                 <div class="mb-10">
                     <h2 class="text-3xl font-bold text-slate-900 flex items-center">
                         <div class="w-1.5 h-8 mr-4 rounded-sm bg-primary"></div>
-                        Technical Focus
+                        Projects
                     </h2>
                     <p class="text-slate-600 mt-4 leading-relaxed max-w-3xl">
-                        A selection of my academic research and personal engineering projects focusing on numerical methods, physical modeling, and fluid dynamics. Check out my GitHub to view the source code.
+                        A selection of my academic research and personal engineering projects focusing on numerical methods and physical modeling.
                     </p>
                 </div>
 
@@ -160,13 +169,13 @@
                             <div class="w-10 h-10 rounded-lg flex items-center justify-center mr-4 bg-primary text-white">
                                 <i class="ph ph-wind text-xl"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-slate-800">Vortex Panel Method Solver</h3>
+                            <h3 class="text-xl font-bold text-slate-800">Airfoil Topology Optimizer</h3>
                         </div>
                         <p class="text-slate-600 mb-3 leading-relaxed text-sm">
-                            Developed a custom 2D aerodynamic solver from scratch to analyze arbitrary airfoil geometries by enforcing the Kutta condition to predict lift coefficients and pressure distributions.
+                            Framework for the design of internal airfoil structure utilizing topology optimization. Leverages the Solid Isotropic Material with Penalization (SIMP) method.
                         </p>
                         <p class="text-xs font-semibold text-slate-500">
-                            <span class="text-primary">Tech:</span> Python, NumPy, Matplotlib
+                            <span class="text-primary">Python, XFOIL
                         </p>
                     </div>
 
@@ -176,13 +185,13 @@
                             <div class="w-10 h-10 rounded-lg flex items-center justify-center mr-4 bg-primary text-white">
                                 <i class="ph ph-cpu text-xl"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-slate-800">PINNs for Fluid Dynamics</h3>
+                            <h3 class="text-xl font-bold text-slate-800">PINN-Implemented DE Solver</h3>
                         </div>
                         <p class="text-slate-600 mb-3 leading-relaxed text-sm">
                             Explored the integration of physical laws into neural network architectures. Built prototype models to solve partial differential equations (PDEs) utilizing boundary condition data.
                         </p>
                         <p class="text-xs font-semibold text-slate-500">
-                            <span class="text-primary">Tech:</span> PyTorch, Machine Learning, CFD
+                            <span class="text-primary">Python, Keras
                         </p>
                     </div>
 
@@ -192,13 +201,13 @@
                             <div class="w-10 h-10 rounded-lg flex items-center justify-center mr-4 bg-primary text-white">
                                 <i class="ph ph-code text-xl"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-slate-800">CST Airfoil Parameterization</h3>
+                            <h3 class="text-xl font-bold text-slate-800">Neural Airfoil</h3>
                         </div>
                         <p class="text-slate-600 mb-3 leading-relaxed text-sm">
-                            Implemented Class-Shape Transformation (CST) mathematical models to parametrically design and optimize aerodynamic surfaces, reducing the dimensionality required for algorithms.
+                            An aerodynamic surrogate model that utilizes deep neural networks to provide instantaneous estimations of lift and drag coefficients.
                         </p>
                         <p class="text-xs font-semibold text-slate-500">
-                            <span class="text-primary">Tech:</span> MATLAB, Python, Geometry
+                            <span class="text-primary">Python, Keras, XFOIL
                         </p>
                     </div>
 
@@ -208,13 +217,13 @@
                             <div class="w-10 h-10 rounded-lg flex items-center justify-center mr-4 bg-primary text-white">
                                 <i class="ph ph-folder-notch text-xl"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-slate-800">Numerical Optimization</h3>
+                            <h3 class="text-xl font-bold text-slate-800">Origami Packaging Methods</h3>
                         </div>
                         <p class="text-slate-600 mb-3 leading-relaxed text-sm">
-                            Applying advanced numerical methods and linear algebra to optimize structural and aerodynamic parameters for high-performance applications.
+                            Researched origami-based methods to develop high-compression, deployable packaging solutions for parabolic solar sails. Offers a weight-efficient alternative to traditional mechanical hinges."
                         </p>
                         <p class="text-xs font-semibold text-slate-500">
-                            <span class="text-primary">Tech:</span> C++, SciPy, Algorithms
+                            <span class="text-primary"> CATIA
                         </p>
                     </div>
 
@@ -228,7 +237,7 @@
                 <div class="mb-10">
                     <h2 class="text-3xl font-bold text-slate-900 flex items-center">
                         <div class="w-1.5 h-8 mr-4 rounded-sm bg-primary"></div>
-                        Experience & Leadership
+                        Experience
                     </h2>
                 </div>
                 
@@ -237,17 +246,30 @@
                     <!-- Exp 1 -->
                     <div class="relative pl-6 pb-8 border-l-2 border-slate-200 last:pb-0">
                         <div class="absolute left-[-9px] top-1 w-4 h-4 bg-bgbase border-2 border-primary rounded-full"></div>
-                        <h3 class="text-lg font-bold text-slate-800">Undergraduate Researcher</h3>
+                        <h3 class="text-lg font-bold text-slate-800">Sergeant</h3>
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
-                            <span class="font-semibold text-primary">UC San Diego</span>
+                            <span class="font-semibold text-primary">ROK Air Force</span>
                             <span class="text-sm text-slate-500">Present</span>
                         </div>
                         <p class="text-slate-600 text-sm leading-relaxed">
-                            Pursuing a rigorous curriculum in Aerospace Engineering. Focusing on advanced fluid mechanics, structural analysis, and computational methods to prepare for PhD-level research.
+                            Currently serving in the Operations Department of the 29th Tactical Fighter Weapons Group, Republic of Korea Air Force. I am responsible for managing complex flight sortie scheduling and providing critical administrative support for advanced pilot combat training programs.
                         </p>
                     </div>
 
                     <!-- Exp 2 -->
+                    <div class="relative pl-6 pb-8 border-l-2 border-slate-200 last:pb-0">
+                        <div class="absolute left-[-9px] top-1 w-4 h-4 bg-bgbase border-2 border-primary rounded-full"></div>
+                        <h3 class="text-lg font-bold text-slate-800">Undergradute Researcher</h3>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
+                            <span class="font-semibold text-primary">Korea Aerospace University</span>
+                            <span class="text-sm text-slate-500">2024</span>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Conducted a comparative analysis of state-of-the-art origami folding patterns to identify optimal designs for parabolic reflectors, focusing on material compatibility with flexible composites and laboratory-specific deployment mechanisms. 
+                        </p>
+                    </div>
+
+                    <!-- Exp 3 -->
                     <div class="relative pl-6 pb-8 border-l-2 border-slate-200 last:pb-0">
                         <div class="absolute left-[-9px] top-1 w-4 h-4 bg-bgbase border-2 border-primary rounded-full"></div>
                         <h3 class="text-lg font-bold text-slate-800">Presenter / Participant</h3>
@@ -257,19 +279,6 @@
                         </div>
                         <p class="text-slate-600 text-sm leading-relaxed">
                             Presented insights connecting aerospace industry trends to STEM leadership. Networked with industry leaders and advocated for interdisciplinary approaches in engineering problem-solving.
-                        </p>
-                    </div>
-
-                    <!-- Exp 3 -->
-                    <div class="relative pl-6 pb-8 border-l-2 border-slate-200 last:pb-0">
-                        <div class="absolute left-[-9px] top-1 w-4 h-4 bg-bgbase border-2 border-primary rounded-full"></div>
-                        <h3 class="text-lg font-bold text-slate-800">Military Service Member</h3>
-                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
-                            <span class="font-semibold text-primary">[Branch of Service]</span>
-                            <span class="text-sm text-slate-500">[Year] - [Year]</span>
-                        </div>
-                        <p class="text-slate-600 text-sm leading-relaxed">
-                            Demonstrated high-stakes operational discipline and team management. Honed the ability to execute complex procedures under pressure, skills directly translatable to rigorous academic research environments.
                         </p>
                     </div>
 
@@ -295,7 +304,7 @@
         <!-- Footer -->
         <footer class="py-8 border-t border-slate-200 text-center">
             <p class="text-slate-500 text-sm">
-                &copy; <span id="year"></span> [Your Name]. All rights reserved.
+                &copy; <span id="year"></span> Kwangbin Bae. All rights reserved.
             </p>
         </footer>
     </main>
